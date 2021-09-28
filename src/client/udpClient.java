@@ -41,12 +41,32 @@ public class udpClient extends clientAbstract{
     }
 
     public static void main(String[] args) {
-        udpClient client = new udpClient(getPort(), getHost());
+        if( args.length == 0 )
+        {
+            System.out.println( "Please add a port number && hostname to connect to server." );
+            System.exit( 0 );
+        }
+        String mentionedPort = args[0];
+        String mentionedHost = args[1];
+
+        udpClient client = new udpClient(mentionedPort, mentionedHost);
         if(client.runnable)
         {
             client.running = true;
             client.run();
         }    
+    }
+
+    @Override
+    public void startClient() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void stopClient() {
+        // TODO Auto-generated method stub
+        
     }
     
 }

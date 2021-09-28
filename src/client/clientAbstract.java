@@ -53,19 +53,7 @@ public abstract class clientAbstract {
         return key + ","+"DELETE"; 
     }
 
-    public static String getPort()
-    {
-        Console console = System.console();
-        String port_ = console.readLine("Enter a port : ");
-        return port_;
-    }
-
-    public static String getHost()
-    {
-        Console console = System.console();
-        String host = console.readLine("Enter a hostname : ");
-        return host;
-    }
-
     public abstract void run();
+    public abstract void startClient();
+    public abstract void stopClient();
 }

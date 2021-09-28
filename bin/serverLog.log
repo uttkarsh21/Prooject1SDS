@@ -1,0 +1,42 @@
+Sep 28, 2021 1:46:52 PM server.serverLogger callLogger
+FINE: initiated TCP server
+Sep 28, 2021 1:46:52 PM server.serverLogger callLogger
+FINE: port is 1234 , on server type UDP , hostname is C02QNDC4FVH3.local
+Sep 28, 2021 1:48:39 PM server.serverLogger callLogger
+FINE: initiated TCP server
+Sep 28, 2021 1:48:40 PM server.serverLogger callLogger
+FINE: port is 1234 , on server type TCP , hostname is C02QNDC4FVH3.local
+Sep 28, 2021 1:48:40 PM server.serverLogger callLogger
+FINE: Listening for the client!
+Sep 28, 2021 1:48:59 PM server.serverLogger callLogger
+FINE: string received from client : 1,GET
+Sep 28, 2021 1:48:59 PM server.serverLogger callLogger
+FINE: client request received not decipherable! received :1,GET
+Sep 28, 2021 1:48:59 PM server.serverLogger callLogger
+FINE: sending reply back to client : client request received not decipherable! received :1,GET
+Sep 28, 2021 1:48:59 PM server.serverLogger callLogger
+FINE: Listening for the client!
+Sep 28, 2021 2:11:10 PM server.serverLogger callLogger
+FINE: initiated TCP server
+Sep 28, 2021 2:11:11 PM server.serverLogger callLogger
+FINE: port is 1234 , on server type TCP , hostname is C02QNDC4FVH3.local
+Sep 28, 2021 2:11:11 PM server.serverLogger callLogger
+FINE: Listening for the client!
+Sep 28, 2021 2:11:20 PM server.serverLogger callLogger
+FINE: string received from client : 1,GET
+Sep 28, 2021 2:11:20 PM server.serverLogger callLogger
+FINE: client request received not decipherable! received :1,GET
+Sep 28, 2021 2:11:20 PM server.serverLogger callLogger
+FINE: sending reply back to client : client request received not decipherable! received :1,GET
+Sep 28, 2021 2:11:20 PM server.serverLogger callLogger
+FINE: Listening for the client!
+Sep 28, 2021 4:51:19 PM server.serverLogger callLogger
+FINE: initiated TCP server
+Sep 28, 2021 4:51:19 PM server.serverLogger callLogger
+FINE: port is 1234 , on server type TCP , hostname is C02QNDC4FVH3.local
+Sep 28, 2021 4:51:19 PM server.serverLogger callLogger
+FINE: Listening for the client!
+Sep 28, 2021 4:52:34 PM server.serverLogger callLogger
+FINE: string received from client : 1,GET
+Sep 28, 2021 4:52:34 PM server.serverLogger callLogger
+FINE: exception thrown : java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2

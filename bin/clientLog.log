@@ -1,0 +1,46 @@
+Sep 28, 2021 1:48:00 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 1:48:01 PM client.clientLogger callLogger
+FINE: setting up datagram socket failed java.net.BindException: Address already in use (Bind failed)
+Sep 28, 2021 1:48:59 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 1:48:59 PM client.clientLogger callLogger
+FINE: Server connection acquired
+Sep 28, 2021 1:48:59 PM client.clientLogger callLogger
+FINE: Reply from server is client request received not decipherable! received :1,GET
+Sep 28, 2021 1:48:59 PM client.clientLogger callLogger
+FINE: closing client now!
+Sep 28, 2021 1:48:59 PM client.clientLogger callLogger
+FINE: Server port not found, exception thrown : java.net.SocketException: Socket is closed
+Sep 28, 2021 1:53:45 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 1:53:46 PM client.clientLogger callLogger
+FINE: java.io.EOFException
+Sep 28, 2021 1:54:06 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 1:54:07 PM client.clientLogger callLogger
+FINE: java.net.UnknownHostException: 3b14097d611d
+Sep 28, 2021 1:56:06 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 1:56:06 PM client.clientLogger callLogger
+FINE: java.io.EOFException
+Sep 28, 2021 2:10:40 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 2:10:40 PM client.clientLogger callLogger
+FINE: java.io.EOFException
+Sep 28, 2021 2:11:19 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 2:11:20 PM client.clientLogger callLogger
+FINE: Server connection acquired
+Sep 28, 2021 2:11:20 PM client.clientLogger callLogger
+FINE: Reply from server is client request received not decipherable! received :1,GET
+Sep 28, 2021 2:11:20 PM client.clientLogger callLogger
+FINE: closing client now!
+Sep 28, 2021 2:11:20 PM client.clientLogger callLogger
+FINE: Server port not found, exception thrown : java.net.SocketException: Socket is closed
+Sep 28, 2021 4:52:33 PM client.clientLogger callLogger
+FINE: looking for tcp server on port -1234
+Sep 28, 2021 4:52:34 PM client.clientLogger callLogger
+FINE: Server connection acquired
+Sep 28, 2021 4:52:34 PM client.clientLogger callLogger
+FINE: java.io.EOFException

@@ -4,15 +4,27 @@ import java.io.*;
 import java.net.*;
 
 public class tcpServer extends serverAbstract {
+
+    ServerSocket serverSocket;
+
     public tcpServer(String port_) {
         super(port_, "TCP");
+        try {
+            serverSocket = new ServerSocket(port);
+        } catch (Exception e) {
+            serverLog.callLogger(e.toString());
+        }
     }
 
     static tcpServer tcpServer;
     public static void main(String[] args) {
-        Console console = System.console();
-        String port_ = console.readLine("Enter a port : ");
-        tcpServer = new tcpServer(port_);
+        if( args.length == 0 )
+        {
+            System.out.println( "Please add a port number && hostname to connect to server." );
+            System.exit( 0 );
+        }
+        String mentionedPort = args[0];
+        tcpServer = new tcpServer(mentionedPort);
         if(tcpServer.runnable)
             tcpServer.startServer();
         
@@ -29,6 +41,12 @@ public class tcpServer extends serverAbstract {
     public
     void stopServer() {
         running = false;
+        try {
+            if(serverSocket != null)
+                serverSocket.close();
+        } catch (Exception e) {
+            serverLog.callLogger(e.toString());
+        }
     } //never used since server runs forever;
 
     @Override
@@ -37,19 +55,16 @@ public class tcpServer extends serverAbstract {
     {
         try
         {
-            ServerSocket thisServer = new ServerSocket(port);
             while(running)
             {
                 tcpServer.serverLog.callLogger("Listening for the client!");    
 
-                Socket socket1 = thisServer.accept();
-        
-                OutputStream socket1out = socket1.getOutputStream();
-                DataOutputStream outputStream = new DataOutputStream(socket1out);
+                Socket socket = serverSocket.accept();
+    
+                DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
                 outputStream.writeUTF("connection acquired");
 
-                InputStream input = socket1.getInputStream();
-                DataInputStream dataReceived = new DataInputStream(input);
+                DataInputStream dataReceived = new DataInputStream(socket.getInputStream());
                
                 String s = new String (dataReceived.readUTF());
                 tcpServer.serverLog.callLogger("string received from client : " + s);      
@@ -60,10 +75,10 @@ public class tcpServer extends serverAbstract {
                 outputStream.writeUTF(op);    
 
                 outputStream.close();
-                socket1.close();
+                socket.close();
             }
             System.out.println("closing server");
-            thisServer.close();
+            
         } catch (Exception e) {
             serverLog.callLogger("exception thrown : " +e);
             System.exit(0);

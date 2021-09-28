@@ -3,6 +3,8 @@ package server;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 
+import java.io.*;
+
 public abstract class serverAbstract {
     public int port; 
     public String serverType;
@@ -72,18 +74,18 @@ public abstract class serverAbstract {
     {
         String reply = "Unrecognized error occured on client request : " + received;
         String[] s = received.split(",");
-        if(s.length == 3)
+        if(s.length > 1)
         {
-            if(s[2] == "PUT")
+            if(s[s.length - 1] == "PUT")
                 reply = dataPUT(s[0], s[1]);
-            else if(s[2] == "GET")
+            else if(s[s.length - 1] == "GET")
                 reply = dataGET(s[0]);
-            else if(s[2] == "DELETE")
+            else if(s[s.length - 1] == "DELETE")
                 reply = dataDELETE(s[0]);
-            else
+            else if(s.length > 2)
             {
-                serverLog.callLogger("client request incorrect : " +s[2] + " , complete request : " +received);
-                reply = "client request incorrect : " +s[2] + " , complete request : " +received;
+                serverLog.callLogger("client request incorrect : " +s[s.length-1] + " , complete request : " +received);
+                reply = "client request incorrect : " +s[s.length-1] + " , complete request : " +received;
             }
         }
         else
